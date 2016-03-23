@@ -13,10 +13,9 @@
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
         <div class="list-group">
-				  <a href="#" class="list-group-item">Manoj</a>
-				  <a href="#" class="list-group-item">Ramesh</a>
-				  <a href="#" class="list-group-item">Rakesh</a>
-				  <a href="#" class="list-group-item">Harish</a>
+          <% @employees.each do |employee| %>
+            <%= link_to employee.name, employee_path(employee), class: "list-group-item" %>
+          <% end %>
 				</div>
       </div>
     </div>
